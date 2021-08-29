@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen Demo</title>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type=""
+        href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+        color="#111">
+    <link rel="canonical" href="https://codepen.io/nailaahmad/pen/MyZXVE">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/plyr.css">
+    <style class="INLINE_PEN_STYLESHEET_ID">
+        body{
+            background-image: url('images/pia22692.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .wrapper {
+            min-height: 100vh;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 300;
+            color: #fff;
+            position: relative;
+        }
+
+        section {
+            font-size: 40px;
+            font-weight: 100;
+            padding-top: 20vh;
+            padding-bottom: 20vh;
+            background-color: #22A7F0;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+        section:nth-child(1) {
+            background: rgb(255, 255, 255);
+        }
+
+        section:nth-child(2) {
+            background: #ffffff00;
+            background-image: linear-gradient(to right, rgba(70, 67, 37, 0.75),rgba(61, 59, 30, 0.75),rgba(41, 39, 19, 0.75),rgba(41, 39, 19, 0.75), rgba(10, 22, 48, 0.75));
+            background-image: linear-gradient( rgba(70, 67, 37, 0.75),rgba(61, 59, 30, 0.75),rgba(41, 39, 19, 0.75),rgba(41, 39, 19, 0.75), rgba(10, 31, 48, 0.75));
+        }
+
+        section:nth-child(3) {
+            background: #ffffff00;
+            background-image: linear-gradient(to right, rgba(10, 31, 48, 0.75),rgba(10, 22, 48, 0.75),rgba(10, 22, 48, 0.75),rgba(10, 22, 48, 0.75), rgba(10, 36, 48, 0.75));
+            background-image: linear-gradient( rgba(10, 31, 48, 0.75),rgba(10, 22, 48, 0.75),rgba(10, 22, 48, 0.75),rgba(10, 22, 48, 0.75), rgba(10, 36, 48, 0.75));
+        }
+
+        section:nth-child(4) {
+            background: #ffffff00;
+            background-image: linear-gradient(to right, rgba(10, 36, 48, 0.75),rgba(28, 41, 46, 0.75),rgba(28, 41, 46, 0.75),rgba(28, 41, 46, 0.75), rgba(28, 41, 46, 0.75));
+            background-image: linear-gradient( rgba(10, 36, 48, 0.75),rgba(28, 41, 46, 0.75),rgba(28, 41, 46, 0.75),rgba(28, 41, 46, 0.75), rgba(28, 41, 46, 0.75));
+        }
+
+        section:nth-child(5) {
+            background: #ffffff00;
+            background-image: linear-gradient(to right, rgba(28, 41, 46, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75), rgba(58, 52, 54, 0.75));
+            background-image: linear-gradient( rgba(28, 41, 46, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75), rgba(58, 52, 54, 0.75));
+        }
+
+        section:nth-child(6) {
+            background: #ffffff00;
+            background-image: linear-gradient(to right, rgba(58, 52, 54, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75), rgba(35, 31, 32, 0.75));
+            background-image: linear-gradient( rgba(58, 52, 54, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75),rgba(35, 31, 32, 0.75), rgba(66, 43, 49, 0.75));
+        }
+
+        section:nth-child(7) {
+            background: #ffffff00;
+            background-image: linear-gradient(to right, rgba(66, 43, 49, 0.75),rgba(73, 36, 36, 0.75),rgba(73, 36, 36, 0.75),rgba(73, 36, 36, 0.75), rgba(29, 7, 7, 0.904)));
+            background-image: linear-gradient( rgba(66, 43, 49, 0.75),rgba(73, 36, 36, 0.75),rgba(73, 36, 36, 0.75),rgba(73, 36, 36, 0.75), rgba(29, 7, 7, 0.904));
+        }
+
+        .nav__wrapper {
+            position: fixed;
+            height: 100%;
+            padding: 30px;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-flow: column nowrap;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+        }
+
+        .nav {
+            margin: 0 0 100px 30px;
+        }
+
+        .nav__counter {
+            font-size: 24px;
+            -webkit-transition: all 0.15s ease-out;
+            transition: all 0.15s ease-out;
+        }
+
+        .nav__title {
+            font-size: 32px;
+            font-weight: 300;
+            margin: 0 0 0.25em;
+            width: 300px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
+            transition: height 0.3s ease-out, opacity 0.2s ease-out;
+        }
+
+        .nav__body {
+            font-weight: 100;
+            font-size: 18px;
+            font-size: 18px;
+            width: 300px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
+            transition: height 0.3s ease-out, opacity 0.2s ease-out;
+        }
+
+        .nav li {
+            position: relative;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            margin-bottom: 1em;
+        }
+
+        .nav li:after {
+            content: '';
+            display: block;
+            border-left: 2px solid white;
+            border-top: 2px solid white;
+            height: 250px;
+            width: 20px;
+            position: absolute;
+            left: -30px;
+            top: 15px;
+        }
+
+        .nav li a {
+            display: block;
+            padding: 0;
+            color: #fff;
+            -webkit-transition: all 0.15s ease-out;
+            transition: all 0.15s ease-out;
+        }
+
+        .nav li a:hover {
+            background-color: transparent;
+            padding-left: 1em;
+        }
+
+        .nav li a:focus {
+            background-color: transparent;
+        }
+
+        .nav li.active {
+            pointer-events: none;
+            padding-left: 1em;
+        }
+
+        .nav li.active:after {
+            width: 35px;
+            height: 400px;
+            top: 35px;
+        }
+
+        .nav li.active .nav__counter {
+            font-size: 48px;
+        }
+
+        .nav li.active .nav__title {
+            height: 40px;
+            opacity: 1;
+            overflow: visible;
+        }
+
+        .nav li.active .nav__body {
+            height: 100px;
+            opacity: 1;
+            overflow: visible;
+        }
+
+        #videoId {
+            text-justify: auto;
+        }
+
+        .link {
+            color:rgb(156, 212, 212);
+            text-decoration: none;
+            font-weight: 300;
+        } /* CSS link color (red) */
+        .link:hover {
+            color: #e1ffff;
+            text-decoration: none;
+            font-weight: 300;
+         } /* CSS link hover (green) */
+
+                  
+        .button {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            fill: #1c1c1d;
+        }
+        .button:hover {
+            fill: white;
+        }
+
+        .defs {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .buttons {
+            padding: 1rem;
+            background: #ffffff00;
+            background-image: linear-gradient( rgba(66, 43, 49, 0.5),rgba(73, 36, 36, 0.5),rgba(73, 36, 36, 0.5),rgba(73, 36, 36, 0.5), rgba(177, 82, 82, 0.2));
+            float: left;
+            top: 0;
+            width: 120px;
+            border-radius: 25px;
+        }
+
+        .buttonwrapper {
+            position: fixed;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-flow: column nowrap;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+            top: 50%;
+            right: 1vw;
+            z-index: 2;
+        }
+    </style>
+    <script
+        src="https://static.codepen.io/assets/editor/iframe/iframeConsoleRunner-7f4d47902dc785f30dedcac9c996b9f31d4dfcc33567cc48f0431bc918c2bf05.js"></script>
+    <script
+        src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-e03f509ba0a671350b4b363ff105b2eb009850f34a2b4deaadaa63ed5d970b37.js"></script>
+    <script
+        src="https://static.codepen.io/assets/editor/iframe/iframeRuntimeErrors-29f059e28a3c6d3878960591ef98b1e303c1fe1935197dae7797c017a3ca1e82.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+    <div class="buttonwrapper">
+        <div id="player"></div>
+        <svg class="defs">
+            <defs>
+                <path id="pause-button-shape"  d="M24,0C10.745,0,0,10.745,0,24s10.745,24,24,24s24-10.745,24-24S37.255,0,24,0z M21,33.064c0,2.201-1.688,4-3.75,4
+                s-3.75-1.799-3.75-4V14.934c0-2.199,1.688-4,3.75-4s3.75,1.801,3.75,4V33.064z M34.5,33.064c0,2.201-1.688,4-3.75,4
+                s-3.75-1.799-3.75-4V14.934c0-2.199,1.688-4,3.75-4s3.75,1.801,3.75,4V33.064z"/>
+                <path id="play-button-shape"  d="M24,0C10.745,0,0,10.745,0,24s10.745,24,24,24s24-10.745,24-24S37.255,0,24,0z M31.672,26.828l-9.344,9.344
+                C20.771,37.729,19.5,37.2,19.5,35V13c0-2.2,1.271-2.729,2.828-1.172l9.344,9.344C33.229,22.729,33.229,25.271,31.672,26.828z"/>
+            </defs>
+        </svg>
+        <div class="buttons">
+            <p style="color:rgb(226, 226, 226);font-family: 'Roboto Slab', serif;font-size: 8pt;text-align: center;">play/pause music</p>
+            <!-- if we needed to change height/width we could use viewBox here -->
+            <svg class="button" id="play-button">
+                <use xlink:href="#play-button-shape">
+            </svg>
+            <svg class="button" id="pause-button">
+                <use xlink:href="#pause-button-shape">
+            </svg>
+        </div>
+    </div>
+    <div class="wrapper">
+        <nav class="nav__wrapper" id="navbar-example">
+            <ul class="nav">
+                <li role="presentation" class="active">
+                    <a href="#section1">
+                        <span class="nav__counter">1987 - Born</span>
+                        <h3 class="nav__title">August 21</h3>
+                        <p class="nav__body"><strong>In Tuebingen</strong>. I was born on a hot sommer day in a hospital in Tuebingen, a small city in southern germany.</p>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#section2">
+                        <span class="nav__counter">1996 - Ulm</span>
+                        <h3 class="nav__title">A new home</h3>
+                        <p class="nav__body"><strong>We moved to Ulm</strong>. My father graduated with a Phd. in Biochemistry and found a postdoc postion at the university of Ulm.</p>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#section3">
+                        <span class="nav__counter">2011 - Bachelor</span>
+                        <h3 class="nav__title">Aerospace Eng.</h3>
+                        <p class="nav__body"><strong>Aachen.</strong> I started bachelor studies in aerospace engineering at the university of applied sciences in Aachen.</p>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#section4">
+                        <span class="nav__counter">2015 - DLR</span>
+                        <h3 class="nav__title">Internship</h3>
+                        <p class="nav__body">I started an Internship at the DLR Space Propulsion Laboraty in Lampoldshausen.</p>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#section5">
+                        <span class="nav__counter">2016 - DLR</span>
+                        <h3 class="nav__title">Bachelor Thesis</h3>
+                        <p class="nav__body">I wrote a program, calculating heat flows and optimizing temperatures for an expander-bleed cycle for my bachelor thesis.</p>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#section6">
+                        <span class="nav__counter">2017 - Modding</span>
+                        <h3 class="nav__title">Starcraft 2</h3>
+                        <p class="nav__body">I fell sick with cancer during my time at DLR and started modding in the Starcraft 2 engine.</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--width: 60vw;-->
+        <section class="section section1" id="section1">
+            <div  style="padding-left: calc(200px + 10vw);padding-right: 12vw;">
+                <br> 
+                <img src="images/young01.png" alt="Young Manuel" height="402" width="302" style="float:left;">
+                <p style="font-size: 20pt;"><strong>Growing up in Tuebingen - Igniting my creativity</strong>.<br><br>My parents originally came from the north-western part of germany. My father fell in love with Tuebingen when he was touring through the country,
+                    finding a university to study biochemistry. My mother followed him to Tuebingen shortly afterwards. In retrospect I'm very thankful for that decision they made. 
+                    The local university is famous for it's wide spectrum of foreign students, and some of them had childs. 
+                    I soon had a lot of friends from all over the world. Kongo, Kamerun, China, Korea, Poland, Mexico, Italy and Syria, just to name some of the countries where my best friends came from. I had an extraordinary luck to grow up with so many different cultural influences. It had a huge impact on my early development. Especially on my creative skills.
+                </p>
+            </div>
+        </section>
+        <section class="section section2" id="section2">
+            <div  style="padding-left: calc(200px + 10vw);padding-right: 12vw;">
+                <br> 
+                <br> 
+                <img src="images/teen.png" alt="Teen Manuel" width="361" height="447" style="float:left;">
+                <p style="font-size: 20pt;"><strong>Early years in Ulm</strong>.<br>
+                    We moved to a small suburb just outside of Ulm, close to the local university. I continued primary school until <strong>1998</strong> and attended middle school afterwards.
+                </p>
+                <p style="font-size: 20pt;">
+                    <strong>2005 - Apprentice Ship at REWE - bulk consumer service</strong><br>After middle school I started an apprentice ship at a grocery wholesale as an management assistant in warehousing and logistics.
+                    <br> I become well acquainted with the world of trade, logistics and hard work. I visited all operational departments within the company. All trainees at REWE benefited from a special training beyond the basics of their prospective profession. In particular I want to mention the anual exhibitions, where I got to know a completely different working environment and also learned another set of skills which I would never had a chance to learn just inside the facility building.<a href="pdfs/ApprenticeShip.pdf" class="link"> I finished in <strong>2009</strong></a> <i class="material-icons">file_copy</i>.
+                </p>
+                <p style="font-size: 20pt;">
+                    <strong>2009 - Valckenburg Highschool Ulm</strong><br>
+                    But that world wasn't mine. I was convinced that I was able to achieve more. I visited high-school with a focus on econimcs. At the same time my interest in more intellectual topics began to grow.
+                    I was more and more interested in Chess, Mathemathics, Physics and Astronomy. I have always been a big fan of Science Fiction too. I bought myself a big telescope and frequently watched the night sky with a couple of friends of mine.
+                    I <a href="pdfs/Highschoolmarks.pdf" class="link">graduated Highschool</a> <i class="material-icons">file_copy</i> in <strong>2011</strong>.
+                </p>
+            </div>
+        </section>
+        <section class="section section3" id="section3">
+            <div  style="padding-left: calc(200px + 10vw);padding-right: 12vw;background-image: url('images/FHAachenBG.png');background-repeat: no-repeat;background-position: center;background-size: auto;">
+                <br> 
+                <br> 
+                <img src="images/me_aachen.png" alt="Young Adult Manuel" width="264" height="351" style="float:left;">
+                <br> 
+                <p style="font-size: 20pt;"><strong>Studying Aerospace Engineering in Aachen</strong>.<br><br> 
+                    In 2011 I started studying Aerospace Engineering at the <a href="https://www.fh-aachen.de/?L=1" class="link" target="_blank">university of applied sciences in Aachen</a> <i class="material-icons">launch</i>. Passing through the first semesters satisfied my appetite for knowledge on applied methods of physics and mathematics to solve engineering problems.
+                    We also had courses teaching us programming and technical drawing. And during two semesters I also learned some chinese and spanish.
+                </p>
+                <p style="font-size: 20pt;">
+                    After the first 4 semesters most fundamentals were covered and more aerospace related topics were deepened. Students then had to choose a specialisation. I picked space-engineering.
+                    We were introduced into basics of space flight dynamics, space vehicles, fundamental physics on environmental requirements for space vehicles and a lot more. <br><a href="pdfs/fh-aachen_courses.pdf" class="link">PDF showing all passed courses</a> <i class="material-icons">file_copy</i>. We also had some courses lectured by a prominent guest lecturer.
+                    NASA's <a href="https://www.nasa.gov/topics/people/features/von_puttkamer_obit.html" class="link" target="_blank">Jesco von Puttkamer</a> <i class="material-icons">launch</i>, who was also scientific advisor on the Star Trek TV-series.
+                    <br> 
+                    <br> 
+                    <br> 
+                </p>
+            </div>
+        </section>
+        <section class="section section4" id="section4">
+            <div  style="padding-left: calc(200px + 10vw);padding-right: 12vw;">
+                <br> 
+                <br> 
+                <p style="font-size: 20pt;"><strong>Intership at the German Aerospace Center (DLR) </strong><img src="images/DLR_Logo.png" alt="Young Adult Manuel" width="74" height="62" style="filter: drop-shadow(1px 1px 1px rgb(255, 255, 255));filter: drop-shadow(1px 1px 0px rgb(112, 112, 112));filter: drop-shadow(2px 2px 0px rgb(112, 112, 112));">.<br><br>
+                    At the end of the 6th semester all students of the faculty are required to do an Internship at a university, company or other organisation that offers projects for interns related to engineering.
+                    The German Aerospace Center is obviously a very good place to gain practical experience, working on a long period project. I applied at the <a href="https://www.dlr.de/content/en/institutes/institute-of-space-propulsion.html" class="link" target="_blank">DLR's In­sti­tute of Space Propul­sion</a> <i class="material-icons">launch</i> in a forest close to the far-off town Lampoldshausen and shortly afterwards received an answer with an invitation.
+                </p>
+                <img src="images/DLRLA.png" alt="Young Adult Manuel" width="800" height="421" style="float:left;">
+                <p style="font-size: 20pt;">
+                    I had to follow strict security guidelines. New rocket propulsion prototypes are being developed and tested on the site. I joined the system-analytics team of the rocket-propulsion division. I first had to learn Python in a couple of weeks. When I was well versed with programming in the new language I was given a more difficult task.
+                    With the help of my advisor Dr. Fromm I wrote a program to calculate rocket trajectories taking into account an atmosphere model, a spherical earth and therefore a changing gravitational field.
+                    The rocket itself was described with a more advanced time dependent rocket equation considering stearing engines, gravity and fluid dynamics.
+                </p>
+            </div>
+        </section>
+        <section class="section section5" id="section5">
+            <div  style="padding-left: calc(200px + 10vw);padding-right: 12vw;">
+                <br> 
+                <br> 
+                <p style="font-size: 20pt;"><strong>Bachelor Thesis at the German Aerospace Center (DLR) </strong><img src="images/DLR_Logo.png" alt="Young Adult Manuel" width="74" height="62" style="filter: drop-shadow(1px 1px 1px rgb(255, 255, 255));filter: drop-shadow(1px 1px 0px rgb(112, 112, 112));filter: drop-shadow(2px 2px 0px rgb(112, 112, 112));">.<br><br>
+                    On completion of the internship I was offered to work on a project for my bachelor thesis. With a demand for a more cost efficient rocket propulsion system,
+                    the system-analytics team was given the task to do preliminary studies on a rocket engine using an expander-bleed cycle. With methan as the preferred choice for fuel. An expander-bleed cycle
+                    is distinguished by the fact that the freezing fuel that is coming out of the tanks first is used to drive a turbo-pump, after cooling chamber and nozzle, before it enters the chamber. Soaking up the heat from the engine wall also has the
+                    benefit that the fuel already has a higher temperature and thus needs less energy to ignite and drive the turbo-pump. A small portion of the fuel won't enter the chamber though and is released from the cycle. 
+                    Mainly because of a higher massflow demand for cooling than is actually needed for the chamber and pump. The most sophisticated part was to accurately describe the heat-flux from the hot propellant to the chamber and nozzle wall.
+                </p>
+                <img src="images/institute.png" alt="Young Adult Manuel" width="490" height="276" style="float:left;">
+                <p style="font-size: 20pt;">
+                    <a href="https://www.grc.nasa.gov/www/CEAWeb/" class="link" target="_blank">NASA's CEA program</a> <i class="material-icons">launch</i> gives good approximations for temperatures and chemical components. 
+                    Furthermore advanved equations (Bartz) for convective and radiative heat tranfser from the boundary layer to the wall were formed into numerical algorithms.
+                    The result  is a temperature distribution along the wall. Changing the boundary conditions would lead to different temperatures.
+                    The goal was to reach temperatures in a safe scope below the melting temperature of the wall's material.
+                </p>
+            </div>
+        </section>
+        <section class="section section6" id="section6">
+            <div  style="padding-left: calc(200px + 10vw);padding-right: 12vw;">
+                <br> 
+                <br> 
+                <p style="font-size: 20pt;"><strong>Modding in Starcraft II </strong><img src="images/SC2_icon.png" alt="Young Adult Manuel" width="72" height="72">.<br><br>
+                    During the internship and bachelor thesis I fell sick with cancer. I got off lightly. 
+                    With 2 major operations and one irradiation afterwards. The cancer was cured with a 98% probability. I'm still doing regular checks. I had 2 big breaks from studies each lasting a few months. 
+                </p>
+                <!--div style="text-align:center;float:left;color: black;font-size: small;padding-right: 10px;"> 
+                    <video id="video1" width="560">
+                        <source src="video/galaxymap.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <br>
+                    <button onclick="playPause()">Play/Pause</button> 
+                    <button onclick="makeBig()">Big</button>
+                    <button onclick="makeSmall()">Small</button>
+                    <button onclick="makeNormal()">Normal</button>
+                </div-->
+                <div style="float:left;margin-right:20px;max-width: 560px;height: 315;">
+                    <video id="player01" playsinline controls data-poster="images/LumenLogo.jpg">
+                        <source src="video/galaxymap.mp4" type="video/mp4" />
+                      
+                        <!-- Captions are optional
+                        <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default /> -->
+                    </video>
+                </div>
+                <p style="font-size: 20pt;">
+                    During that time I started questioning everything. I only wanted to do things that distract me as much as possible from the whole desease. One very effective way was to start modding video games.
+                    Especially the Star Craft 2 engine editor was providing a wide set of tools to create my own worlds. Luckily I brought some good programming skills with me I acquired during the last couple years.
+                    I spent the whole day working on my own arcade projects. I made a card game ala Hearthstone or Magic the Gathering Arena but with the big difference that players would actually control their units.
+                    Another fun game I made is a top down space shooter with twin stick controls. After a while I realized that I'm actually really good at it and that I enjoy it a lot and that there might be more to it then just being a simple distraction. There are more infos about my projects in the <a href="covi.html" class="link">portfolio</a> <i class="material-icons">launch</i> section.
+                </p>
+            </div>
+        </section>
+    </div>
+    <script
+        src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script id="INLINE_PEN_JS_ID">
+        // SMOOTH SCROLLING SECTIONS
+        $("a[href*=#]:not([href=#])").click(function () {
+            if (
+                location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") ||
+                location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+                if (target.length) {
+                    $("html,body").animate(
+                        {
+                            scrollTop: target.offset().top
+                        },
+
+                        1000);
+
+                    return false;
+                }
+            }
+        });
+    </script>
+        <script> 
+            var myVideo = document.getElementById("video1"); 
+            myVideo.volume = 0.0;
+            
+            function playPause() { 
+            if (myVideo.paused) 
+                myVideo.play(); 
+            else 
+                myVideo.pause(); 
+            } 
+            
+            function makeBig() { 
+                myVideo.width = 1280; 
+            } 
+            
+            function makeSmall() { 
+                myVideo.width = 420; 
+            } 
+            
+            function makeNormal() { 
+                myVideo.width = 560; 
+            } 
+        </script> 
+        <script src="js/plyr.js">
+        </script>
+        <script>
+            const player01 = new Plyr('#player01');
+        </script>
+        <script>
+            // 2. This code loads the IFrame Player API code asynchronously.
+            var tag = document.createElement('script');
+        
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+            // 3. This function creates an <iframe> (and YouTube player)
+            //    after the API code downloads.
+            var player;
+            
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'qm0ru2iBuB0',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange,
+                }
+                });
+            }
+        
+            // 4. The API will call this function when the video player is ready.
+            function onPlayerReady(event) {
+                event.target.setVolume(3);
+                event.target.playVideo();
+    
+                    // bind events
+                var playButton = document.getElementById("play-button");
+                playButton.addEventListener("click", function() {
+                    player.playVideo();
+                });
+                
+                var pauseButton = document.getElementById("pause-button");
+                pauseButton.addEventListener("click", function() {
+                    player.pauseVideo();
+                });
+            }
+        
+            // 5. The API calls this function when the player's state changes.
+            //    The function indicates that when playing a video (state=1),
+            //    the player should play for six seconds and then stop.
+            var done = false;
+            function onPlayerStateChange(event) {
+                if (event.data == YT.PlayerState.PLAYING && !done) {
+                /*setTimeout(stopVideo, 6000);*/
+                
+                done = true;
+                }
+            }
+            function stopVideo() {
+                player.stopVideo();
+            }
+    
+        </script>
+</body>
+
+</html>

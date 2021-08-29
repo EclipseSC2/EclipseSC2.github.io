@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen Demo</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body">
+    <div id="container">
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/venice.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title" data-title="Venice">Venice</h1>
+            <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/italian-emblem.svg);"></div>
+            <ul class="city-info">
+              <li class="country">Country: Italy</li>
+              <li class="founded">Founded: 697</li>
+              <li class="population">Population: 260,060</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/paris.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title" data-title="Paris">Paris</h1>
+            <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/french-emblem.svg);"></div>
+            <ul class="city-info">
+              <li class="country">Country: France</li>
+              <li class="founded">Founded: ~250BC</li>
+              <li class="population">Population: 2.2 Million</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/salzburg.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title" data-title="Salzburg">Salzburg</h1>
+            <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/austrian-emblem.svg);"></div>
+            <ul class="city-info">
+              <li class="country">Country: Austria</li>
+              <li class="founded">Founded: 1622</li>
+              <li class="population">Population: 145,871</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/prague.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h1 class="title" data-title="Prague">Prague</h1>
+            <div class="emblem" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/czech-emblem.svg);"></div>
+            <ul class="city-info">
+              <li class="country">Country: Czech Republic</li>
+              <li class="founded">Founded: 870</li>
+              <li class="population">Population: 1.2 Million</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+      </div><a id="codepen-link" href="https://www.codepen.io/seanfree" target="_blank"></a>
+      <script>
+(function(window, document, $, undefined) {
+	var $slides, $btnArr;
+
+	function onClick(e) {
+		var $target = $(e.target);
+		if ($target.hasClass('slide') && !$target.hasClass('active') && !$target.siblings().hasClass('active')) {
+			$target.removeClass('anim-in last-viewed').addClass('active')
+			$target.siblings().removeClass('anim-in last-viewed').addClass('anim-out');
+		}
+	}
+
+	function closeSlide(e) {
+		var $slide = $(e.target).parent();
+		$slide.removeClass('active anim-in').addClass('last-viewed');
+		$slide.siblings().removeClass('anim-out').addClass('anim-in');
+	}
+
+	$(function() {
+		$slides = $('.slide');
+		$btnArr = $slides.find('.btn-close');
+		$slides.on('click', onClick);
+		$btnArr.on('click', closeSlide);
+	});
+})(this, document, jQuery);
+      </script>
+</body>
+
+</html>
