@@ -7,12 +7,13 @@ html, body {
 
 body {
   background: #1f1f1f;
-  font-family: 'Open Sans';
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Open Sans';
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 
 #container {
@@ -55,6 +56,14 @@ h1, h2, h3, h4 {
   transition: all 0.5s;
   transition-delay: 0s;
 }
+
+/*INFOTEXT*/
+.slide.last-viewed .content .infotext {
+  transition: all 0.5s;
+  transition-delay: 0s;
+}
+/*INFOTEXT*/
+
 .slide.last-viewed .image, .slide.active .image {
   top: 0;
   left: 0;
@@ -86,13 +95,33 @@ h1, h2, h3, h4 {
 }
 .slide.active .content .title:after {
   height: 100%;
-  color: white;
+  color: rgb(195, 255, 210);
   overflow: initial;
 }
 .slide.active .content .title:before {
   transform: scaleX(1);
   transition-delay: 2s;
 }
+
+/* NEW */
+.slide.active .content .subtitle {
+  width: 25%;
+  opacity: 1;
+  transform: translateY(90px);
+  transition: all 1s;
+  transition-delay: 1.35s;
+}
+.slide.active .content .subtitle:after {
+  height: 100%;
+  color: rgb(139, 216, 158);
+  overflow: initial;
+}
+.slide.active .content .subtitle:before {
+  transform: scaleX(1);
+  transition-delay: 2.1s;
+}
+/* NEW */
+
 .slide.active .content .city-info {
   opacity: 1;
 }
@@ -102,8 +131,15 @@ h1, h2, h3, h4 {
 }
 .slide.active .content .emblem {
   opacity: 0.8;
-  transform: translateY(100px);
+  transform: translateY(130px);
 }
+/*INFOTEXT*/
+.slide.active .content .infotext{
+  opacity: 0.8;
+  transform: translateY(130px);
+}
+/*INFOTEXT*/
+
 .slide.active .btn-close {
   cursor: pointer;
   pointer-events: auto;
@@ -223,7 +259,7 @@ h1, h2, h3, h4 {
   display: block;
   content: attr(data-title);
   overflow: hidden;
-  color: #ffffff;
+  color: #bbefff;
   transition: all 0.85s;
 }
 .slide .content .title:before {
@@ -231,7 +267,7 @@ h1, h2, h3, h4 {
   bottom: 15px;
   display: block;
   content: "";
-  height: 2px;
+  height: 0px;
   width: 85%;
   background: white;
   box-shadow: 0 2px 6px #2f2f2f;
@@ -239,18 +275,85 @@ h1, h2, h3, h4 {
   transform: scaleX(0);
   transition: transform 1.25s;
 }
+/*NEW*/
+.slide .content .subtitle {
+  position: absolute;
+  top: -10px;
+  height: 65px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  text-shadow: 0 2px 2px #2f2f2f;
+  color: #3f3f3f;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+  font-size: 12pt;
+}
+.slide .content .subtitle:after {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  display: block;
+  content: attr(data-subtitle);
+  overflow: hidden;
+  color: #6caabd;
+  transition: all 0.95s;
+  font-size: 12pt;
+}
+.slide .content .subtitle:before {
+  position: absolute;
+  bottom: 15px;
+  display: block;
+  content: "";
+  height: 0px;
+  width: 85%;
+  background: white;
+  box-shadow: 0 2px 6px #2f2f2f;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.35s;
+  font-size: 12pt;
+}
+/*NEW*/
+
 .slide .content .emblem {
   position: absolute;
   height: 200px;
   width: 25%;
   opacity: 0;
-  transform: translateY(120px);
+  transform: translateY(150px);
   transition: all 1s;
   transition-delay: 1.75s;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 100%;
 }
+
+/*Infotext*/
+.slide .content .infotext {
+  position: absolute;
+  width: 22%;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 1s;
+  transition-delay: 1.75s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  top: 25%;
+  height: 75%;
+  left: 2%;
+  box-sizing: border-box;
+  font-size: larger;
+  text-align: left;
+  text-shadow: 0 2px 2px #2f2f2f;
+  color: #ffffff;
+}
+/*Infotext*/
+
 .slide .content .city-info {
   position: absolute;
   bottom: 30px;
@@ -323,6 +426,15 @@ h1, h2, h3, h4 {
 .slide:hover:not(.active):not(.anim-out) .content .title:after {
   height: 100%;
 }
+/*NEW*/
+.slide:hover:not(.active):not(.anim-out) .content .subtitle {
+  opacity: 1;
+  transform: translateY(90px);
+}
+.slide:hover:not(.active):not(.anim-out) .content .subtitle:after {
+  height: 100%;
+}
+/*NEW*/
 
 #codepen-link {
   position: absolute;

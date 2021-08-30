@@ -150,7 +150,7 @@
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
-  font-family: 'Open Sans';
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   min-width: 13vw;
   white-space: nowrap;
@@ -250,7 +250,7 @@
      margin-top: 6px;
      margin-bottom: 0px;
      align-items: center;
-     font-family: 'Open Sans';
+     font-family: 'Poppins', sans-serif;
      font-style: inherit;
  }
  .logo-background{
